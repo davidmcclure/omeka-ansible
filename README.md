@@ -1,3 +1,3 @@
 # Omeka Ansible
 
-An [Ansible](http://www.ansible.com/home) role for deploying Omeka.
+An [Ansible](http://www.ansible.com/home) role for deploying [Omeka](http://omeka.org/).
