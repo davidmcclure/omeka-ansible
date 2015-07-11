@@ -1,0 +1,25 @@
+---
+
+- name: Install system dependencies
+  apt:
+    pkg: "{{ item }}"
+    update_cache: yes
+    state: latest
+  with_items:
+    - git
+
+- name: Create the src directory
+  file:
+    path: '{{ omeka_src }}'
+    state: directory
+
+- name: Pull the code from GitHub
+  git:
+    repo: '{{ omeka_repo }}'
+    version: '{{ omeka_branch }}'
+    dest: '{{ omeka_src }}'
+    accept_hostkey: yes
+
+#- name: Set .htaccess
+#- name: Set config.yml
+#- name: Set db.ini

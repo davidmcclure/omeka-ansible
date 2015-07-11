@@ -1,0 +1,6 @@
+---
+
+omeka_repo: https://github.com/omeka/Omeka
+omeka_branch: stable-2.3
+omeka_src: /var/www/html/omeka
+
