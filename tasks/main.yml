@@ -8,18 +8,29 @@
   with_items:
     - git
 
-- name: Create the src directory
+- name: Create the source code directory
   file:
     path: '{{ omeka_src }}'
     state: directory
 
-- name: Pull the code from GitHub
+- name: Pull Omeka from GitHub
   git:
     repo: '{{ omeka_repo }}'
     version: '{{ omeka_branch }}'
     dest: '{{ omeka_src }}'
     accept_hostkey: yes
 
-#- name: Set .htaccess
-#- name: Set config.yml
-#- name: Set db.ini
+- name: Set .htaccess
+  command: cp .htaccess.changeme .htaccess
+  args:
+    chdir: '{{ omeka_src }}'
+
+- name: Set config.yml
+  command: cp config.ini.changeme config.ini
+  args:
+    chdir: '{{ omeka_src }}/application/config'
+
+- name: Set db.ini
+  template:
+    src: db.ini.j2
+    dest: '{{ omeka_src }}/db.ini'

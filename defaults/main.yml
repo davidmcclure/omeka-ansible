@@ -4,3 +4,10 @@ omeka_repo: https://github.com/omeka/Omeka
 omeka_branch: stable-2.3
 omeka_src: /var/www/html/omeka
 
+omeka_host: localhost
+omeka_username: omeka
+omeka_password: omeka
+omeka_dbname: omeka
+omeka_prefix: omeka_
+omeka_charset: utf8
+omeka_port: 3306
