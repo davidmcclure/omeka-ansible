@@ -19,6 +19,16 @@ omeka_prefix: omeka_
 omeka_charset: utf8
 omeka_port: 3306
 
+# A list of themes to install.
+
+omeka_themes:
+
+  - name: neatlight
+    repo: https://github.com/davidmcclure/neatlight.git
+    version: master
+
+# A list of plugins to install.
+
 omeka_plugins:
 
   - name: Neatline

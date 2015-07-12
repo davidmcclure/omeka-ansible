@@ -63,6 +63,15 @@
     mode: 755
     recurse: yes
 
+- name: Install themes
+  with_items: omeka_themes
+  git:
+    repo: '{{ item.repo }}'
+    version: '{{ item.version }}'
+    dest: '{{ omeka_src }}/themes/{{ item.name }}'
+    accept_hostkey: yes
+    force: yes
+
 - name: Install plugins
   with_items: omeka_plugins
   git:
