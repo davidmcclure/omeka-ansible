@@ -57,5 +57,10 @@ omeka_plugins:
 # omeka_files: /path/to/files
 ```
 
+---
+
+If you find bugs, file an issue or send a PR! Or, hit me up on [Twitter][clured].
+
 [ansible]: http://www.ansible.com
 [omeka]: http://omeka.org
+[clured]: https://twitter.com/clured

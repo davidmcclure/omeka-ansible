@@ -53,14 +53,14 @@
   when: omeka_files is not defined
   file:
     path: '{{ omeka_src }}/files'
-    mode: 755
+    mode: 0755
     recurse: yes
 
 - name: Set file permissions (linked)
   when: omeka_files is defined
   file:
     path: '{{ omeka_files }}'
-    mode: 755
+    mode: 0755
     recurse: yes
 
 - name: Install themes
