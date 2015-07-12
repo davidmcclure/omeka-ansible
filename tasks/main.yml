@@ -62,3 +62,12 @@
     path: '{{ omeka_files }}'
     mode: 755
     recurse: yes
+
+- name: Install plugins
+  with_items: omeka_plugins
+  git:
+    repo: '{{ item.repo }}'
+    version: '{{ item.version }}'
+    dest: '{{ omeka_src }}/plugins/{{ item.name }}'
+    accept_hostkey: yes
+    force: yes
