@@ -36,6 +36,13 @@
     src: db.ini.j2
     dest: '{{ omeka_src }}/db.ini'
 
+- name: Symlink files
+  when: omeka_files is defined
+  file:
+    src: '{{ omeka_files }}'
+    dest: '{{ omeka_src }}/files'
+    state: link
+
 - name: Set file permissions
   file:
     path: '{{ omeka_src }}/files'
