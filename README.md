@@ -7,6 +7,7 @@ A simple, no-frills [Ansible][ansible] role for deploying [Omeka][omeka] from so
 - Sets environment-specific config files - `.htaccess`, `config.ini`, `db.ini`.
 - Symlinks the `/files` directory from an external location (optional).
 - Sets permissions on `/files`.
+- Installs Imagemagick.
 - Installs plugins and themes.
 
 ## Variables
@@ -58,6 +59,8 @@ omeka_plugins:
 ```
 
 ---
+
+## Contributing
 
 If you find bugs, file an issue or send a PR! Or, hit me up on [Twitter][clured].
 
