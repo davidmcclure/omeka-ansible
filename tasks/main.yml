@@ -19,6 +19,7 @@
     version: '{{ omeka_branch }}'
     dest: '{{ omeka_src }}'
     accept_hostkey: yes
+    force: yes
 
 - name: Set .htaccess
   command: cp .htaccess.changeme .htaccess
