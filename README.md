@@ -1,13 +1,13 @@
 # Omeka Ansible
 
-A simple, no-frills [Ansible][ansible] role for deploying [Omeka][omeka] from source. The role takes care of the following:
+A simple, no-frills [Ansible][ansible] role for deploying [Omeka][omeka] from source:
 
-- Creating the directory structure for Omeka.
-- Cloning the source code from GitHub.
-- Setting environment-specific config files - `.htaccess`, `config.ini`, `db.ini`.
-- Symlinking the `/files` directory from an external location (optional).
-- Setting permissions on `/files`.
-- Installing plugins and themes.
+- Creates the directory structure for Omeka.
+- Clones the source code from GitHub.
+- Sets environment-specific config files - `.htaccess`, `config.ini`, `db.ini`.
+- Symlinks the `/files` directory from an external location (optional).
+- Sets permissions on `/files`.
+- Installs plugins and themes.
 
 ## Variables
 
