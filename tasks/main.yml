@@ -36,6 +36,12 @@
     src: db.ini.j2
     dest: '{{ omeka_src }}/db.ini'
 
+- name: Clear default files
+  when: omeka_files is defined
+  file:
+    path: '{{ omeka_src }}/files'
+    state: absent
+
 - name: Symlink files
   when: omeka_files is defined
   file:
@@ -43,9 +49,16 @@
     dest: '{{ omeka_src }}/files'
     state: link
 
-- name: Set file permissions
+- name: Set file permissions (local)
+  when: omeka_files is not defined
   file:
     path: '{{ omeka_src }}/files'
-    state: directory
+    mode: 755
+    recurse: yes
+
+- name: Set file permissions (linked)
+  when: omeka_files is defined
+  file:
+    path: '{{ omeka_files }}'
     mode: 755
     recurse: yes
