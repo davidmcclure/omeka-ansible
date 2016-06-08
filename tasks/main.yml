@@ -55,6 +55,7 @@
   file:
     path: '{{ omeka_src }}/files'
     mode: 0755
+    owner: '{{ omeka_user }}'
     recurse: yes
 
 - name: Set file permissions (linked)
@@ -62,6 +63,7 @@
   file:
     path: '{{ omeka_files }}'
     mode: 0755
+    owner: '{{ omeka_user }}'
     recurse: yes
 
 - name: Install themes

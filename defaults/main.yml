@@ -8,6 +8,7 @@ omeka_branch: stable-2.4
 # The location of the deployed Omeka source code.
 
 omeka_src: /var/www/html/omeka
+omeka_user: www-data
 
 # Database connection parameters for db.ini.
 
