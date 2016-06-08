@@ -3,7 +3,7 @@
 # The Omeka git repository and branch.
 
 omeka_repo: https://github.com/omeka/Omeka
-omeka_branch: stable-2.3
+omeka_branch: stable-2.4
 
 # The location of the deployed Omeka source code.
 
